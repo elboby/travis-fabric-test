@@ -22,3 +22,8 @@ def test():
     """ run simple test """
     local("pwd")
     run("pwd")
+
+    folder = "~/test-boby"
+    with settings(warn_only=True):
+        if run("test -d %s" % folder).failed:
+            run("mkdir -p %s" % (folder))
