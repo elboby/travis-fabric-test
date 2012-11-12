@@ -8,7 +8,7 @@ SERVERS['localbox'] = [
     'hero@192.168.3.201'
 ]
 SERVERS['travis'] = [
-    'travis@127.0.0.1'
+    '127.0.0.1'
 ]
 
 
