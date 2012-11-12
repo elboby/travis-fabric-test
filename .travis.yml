@@ -1,0 +1,10 @@
+language: python
+python:
+  - "2.7"
+install:
+  - "pip install -r requirements.pip --use-mirrors"
+  - "echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDE4LaMStbD1vOfSYRJvG595uCXGdkZp+qFyol9jJliaDOUkr8wS0Gjbi1FueuVuzavQX2vZzuzHbA3OGPMCxXWab2mnq7qNodZfbduJvCrjNsurY+Fv++gkjFgcTXXxSkPxYIkY6QCt/d3J35UAnu7jJ+8QHR51hstCmRsJ6wDyw== travis@localhost\" >> ~/.ssh/authorized_keys"
+script:
+  - "fab on_:travis test"
+notifications:
+  email: false
